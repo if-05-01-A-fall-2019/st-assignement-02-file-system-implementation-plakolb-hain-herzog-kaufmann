@@ -10,5 +10,6 @@
 - all blocks with bits of the file have to be found
 ## What has to be done if you want to access foo.txt randomly (seek())?
 ## What has to be done when the file size decreases? Especially take care if it needs fewer blocks
+- blocks that are not being used anymore have to be marked as 'free' by the system
 ## What has to be done when a file is deleted?
 - file name entry has to be removed from directory
