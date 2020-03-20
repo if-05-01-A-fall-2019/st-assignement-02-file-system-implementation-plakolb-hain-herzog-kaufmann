@@ -13,4 +13,5 @@
 - blocks that are not being used anymore have to be marked as 'free' by the system
 ## What has to be done when a file is deleted?
 - file name entry has to be removed from directory
+- unused blocks have to be marked 'free' again, just like when decreasing the size
 - it's not being overwritten unless a third-party program is being used to do so
