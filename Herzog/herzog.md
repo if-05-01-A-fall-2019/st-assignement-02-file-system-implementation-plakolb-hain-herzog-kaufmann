@@ -8,8 +8,10 @@
 - info that doesn't fit on the old blocks has to be moved & saved on the free ones
 #### What has to be done if a file is read sequentially?
 - all blocks with bits of the file have to be found
+- return all found bytes (joined)
 #### What has to be done if you want to access foo.txt randomly (seek())?
 - a block to jump to has to be calculated
+- the info of each block has to be taken care of
 #### What has to be done when the file size decreases? Especially take care if it needs fewer blocks
 - blocks that are not being used anymore have to be marked as 'free' by the system
 #### What has to be done when a file is deleted?
