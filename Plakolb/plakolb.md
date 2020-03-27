@@ -13,7 +13,7 @@ That means new bytes get allocated and get saved in the metadata file.
 You want to search for the path which is stored in the metadata file. Then you search for the first allocated block which is stored in said metadata file. That repeats until you are at the end of the file (presumably at '\0').
 
 ## What has to be done if you want to access foo.txt randomly (seek())?
-Blocksize-bool=size
+Blocksize-bool = size
 position/size = nr.block
 
 Is the formula to calculate the wanted position of a file. To enter at a randm location i guess you need to add a rand.
