@@ -10,7 +10,7 @@ Extra memory has to be allocated if the existing blocks aren't enough.
 That means new bytes get allocated and get saved in the metadata file.
 
 ## What has to be done if a file is read sequentially?
-We search for the name and read it in the order it's saved.
+You want to search for the path which is stored in the metadata file. Then you search for the first allocated block which is stored in said metadata file. That repeats until you are at the end of the file (presumably at '\0').
 
 ## What has to be done if you want to access foo.txt randomly (seek())?
 Blocksize-bool=size
