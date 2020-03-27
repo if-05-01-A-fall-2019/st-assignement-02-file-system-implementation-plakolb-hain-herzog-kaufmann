@@ -1,12 +1,8 @@
-What has to be done, when creating a file foo.txt? <br>
-allocate space, save the size of the file and the adress of the blocks
+Hain Lukas
 
-What has to be done, when the file size has to be increased? Especially take care if it needs additional blocks<br>
-allocate new space,
-
-What has to be done if a file is read sequentially?<br>
-
-
-What has to be done if you want to access foo.txt randomly (seek())?
-What has to be done when the file size decreases? Especially take care if it needs fewer blocks
-What has to be done when a file is deleted?
+- size of the file determined, how many blocks it needs, space on the disk marked as full, blockids saved in the first block, start address and end address stored,
+- extra space allocated, bocks stored
+- If the file spans across multiple blocks: keep track where to read next,
+- keep track of start and end,
+- don't delete the parts of the file that the user wants to keep, free space released, addresses updated,
+- All space has to be marked unused
